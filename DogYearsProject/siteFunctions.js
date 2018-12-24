@@ -1,8 +1,8 @@
 function updateAge() {
+
   let temp = document.getElementById('age').value;
   if (temp >= 0) {
     age = document.getElementById('age').value;
-
   } else {
     alert("Enter a valid age!");
   }
@@ -19,7 +19,6 @@ function updateAge() {
 
 
 function next() {
-
   let temp = animals.shift();
   const object = new Animal(temp, age, animalAlgos[temp]);
   object.calculateAge();
@@ -30,19 +29,35 @@ function next() {
   animalObject = object;
   animals.push(temp);
 
+  console.log(animals);
+}
+
+
+function unHide() {
+  let ageForm = document.querySelector("#ageForm");
+
+  ageForm.style.display = "block";
 }
 
 function back() {
 
-  let temp = animals.pop();
-  const object = new Animal(temp, age, animalAlgos[temp]);
-  object.calculateAge();
-  console.log(object);
-  document.getElementById('title').innerHTML = object.generateDescription();
-  createAgeElement(object);
-  updateColor();
-  animalObject = object;
-  animals.unshift(temp);
+    let temp = animals.pop();
+    if(temp == animals[0]){
+      back();
+
+    }else{
+    const object = new Animal(temp, age, animalAlgos[temp]);
+    object.calculateAge();
+    console.log(temp);
+    document.getElementById('title').innerHTML = object.generateDescription();
+    createAgeElement(object);
+    updateColor();
+    animalObject = object;
+    animals.unshift(temp);
+
+}
+
+  console.log(animals);
 
 
 
