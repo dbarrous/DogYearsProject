@@ -7,18 +7,23 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
+
 </head>
 
 <body>
   <main id="block">
-    <h1 id="title">How Old Are You In Dog Years?</h1>
+    <h1 id="title">How Old Are You?</h1>
     <form id="ageForm">
       <label for="age" id="labelAge">Your Age:</label>
-      <input type="text" id="age" name="age">
-      <img src="pics/doggy.png" alt="">
-      <button type="button" class="pure-material-button-contained" name="button" onclick="calc()">Calculate!</button>
+      <input type="text" id="age" name="age" onkeyup="updateAge()">
     </form>
+
+    <button onclick="back()" class="pure-material-button-contained-small">Previous Animal</button>
+    <button onclick="next()" class="pure-material-button-contained-small">Next Animal</button>
+
   </main>
+  <script type="text/javascript" src="Animal.js"></script>
+  <script type="text/javascript" src ="siteFunctions.js"></script>
   <script type="text/javascript" src="main.js"></script>
 
 </body>

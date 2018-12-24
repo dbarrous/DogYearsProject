@@ -1,40 +1,17 @@
-let ageInHuman = 0;
-let ageInDog = 0;
+const animals = ["Dog", "Cat", "Iguana", "Snake", "Tortoise", "Goldfish", "Horse", "Cow"];
+const animalAlgos = {
 
-function calc() {
-  age = document.getElementById('age').value;
-  if(age >= 0 && !isNaN(age)){
-    createAge(yearInDog(age));
-  }else{
-    alert("Enter a valid age!");
-  }
-}
+  "Dog": [2, 10.5, 4], //First Two, Every Other One
+  "Cat": [2, 12.5, 4], //First Two, Every Other One
+  "Iguana": [1, 16, 6], // First, Every Other
+  "Snake": [1, 18, 6], //First, Every Other
+  "Tortoise": [1, 12, 10], //First, Every Other
+  "Goldfish": [1, 18, 8], //First, Every Other
+  "Horse": [0, 3], //Every Year
+  "Cow": [1, 14, 4], //First, Every Other,
 
-function yearInDog(humanAge) {
 
-    if (humanAge >= 0) {
-      ageInHuman = humanAge;
-      if (humanAge < 2) {
-        ageInDog = ageInHuman * 10.5;
-        return ageInDog;
-      } else {
-        ageInDog = ((ageInHuman - 2) * 4) + 21;
-        return ageInDog;
-      }
-}
-}
-
-function createAge(x) {
-  if (document.getElementById('ageResult') == null) {
-    let para = document.createElement("p");
-    let node = document.createTextNode("Dog Years: " + x);
-    para.appendChild(node);
-    para.setAttribute("id", "ageResult");
-    document.body.appendChild(para);
-  } else if(document.getElementById('ageResult') != undefined){
-    element = document.getElementById('ageResult');
-    document.body.removeChild(element);
-    createAge(x);
-  }else{}
-
-}
+};
+let age = document.getElementById('age').value;
+let animalObject = {};
+let colorArray = ["#2c3e50","#c0392b","#2980b9","#16a085"];
