@@ -3,9 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Dog Year Calculator</title>
+  <title>AniAnimals Calculator</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <meta name="author" content="Damian Barrous-Dume">
+  <link rel="shortcut icon" type="image/png" href="pics/default.png">
+  <meta name="description" content="This webpage allows you to calculate your age if you were a Dog, Cat, Snake, Turtle, Goldfish, Horse, Cow. More updates to come in styling as well as more animals!">
 
 
 </head>
@@ -20,10 +23,10 @@
       <input type="text" id="age" name="age" onkeyup="updateAge()">
     </form>
 
-    <button onclick="back();unHide()" class="pure-material-button-contained-small">Previous Animal</button>
-    <button onclick="next();unHide();" class="pure-material-button-contained-small">Next Animal</button>
-
+    <button onclick="back();unHide()" id="prev" class="pure-material-button-contained-small">Previous Animal</button>
+    <button onclick="next();unHide();" id="next" class="pure-material-button-contained-small">Next Animal</button>
   </main>
+  <img  id="picture" src="pics/default.png" alt="Animal Picture">
   <script type="text/javascript" src="Animal.js"></script>
   <script type="text/javascript" src ="siteFunctions.js"></script>
   <script type="text/javascript" src="main.js"></script>

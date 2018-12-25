@@ -14,22 +14,31 @@ function updateAge() {
 
 }
 
-
+function updatePic(animalName){
+  document.getElementById('picture').src = `pics/${animalName}.png`;
+}
 
 
 
 function next() {
-  let temp = animals.shift();
-  const object = new Animal(temp, age, animalAlgos[temp]);
-  object.calculateAge();
-  console.log(object);
-  document.getElementById('title').innerHTML = object.generateDescription();
-  createAgeElement(object);
-  updateColor();
-  animalObject = object;
-  animals.push(temp);
+    if(counter == 0){
+      let temp1 = animals.shift();
+      animals.push(temp1);
+    }
 
-  console.log(animals);
+    let temp = animals.shift();
+    const object = new Animal(temp, age, animalAlgos[temp]);
+    object.calculateAge();
+    console.log(object);
+    document.getElementById('title').innerHTML = object.generateDescription();
+    createAgeElement(object);
+    updateColor();
+    updatePic(temp);
+    animalObject = object;
+    animals.push(temp);
+    console.log(animals);
+    counter = 1;
+
 }
 
 
@@ -40,29 +49,31 @@ function unHide() {
 }
 
 function back() {
+      if(counter == 1){
+        let temp1 = animals.pop();
+        animals.unshift(temp1);
 
-    let temp = animals.pop();
-    if(temp == animals[0]){
-      back();
-
-    }else{
-    const object = new Animal(temp, age, animalAlgos[temp]);
-    object.calculateAge();
-    console.log(temp);
-    document.getElementById('title').innerHTML = object.generateDescription();
-    createAgeElement(object);
-    updateColor();
-    animalObject = object;
-    animals.unshift(temp);
-
-}
-
-  console.log(animals);
-
-
+      }
+      let temp = animals.pop();
+      const object = new Animal(temp, age, animalAlgos[temp]);
+      object.calculateAge();
+      console.log(temp);
+      document.getElementById('title').innerHTML = object.generateDescription();
+      createAgeElement(object);
+      updatePic(temp);
+      updateColor();
+      animalObject = object;
+      animals.unshift(temp);
+      counter = 0;
 
 
 }
+
+
+
+
+
+
 
 function updateColor() {
   backgroundColor = colorArray.shift();
@@ -80,10 +91,11 @@ function createAgeElement(animalObject) {
     let node = document.createTextNode(animalObject.species + " Years: " + animalObject.animalAge);
     para.appendChild(node);
     para.setAttribute("id", "ageResult");
-    document.body.appendChild(para);
+
+    body.appendChild(para);
   } else if (!(isNaN(animalObject.animalAge))) {
     element = document.getElementById('ageResult');
-    document.body.removeChild(element);
+    body.removeChild(element);
     createAgeElement(animalObject);
   } else {}
 

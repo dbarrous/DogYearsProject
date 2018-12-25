@@ -4,7 +4,7 @@
 }
 
 body{
-  background-color: #130f40;
+  background-color: #001f3f;
   color:white;
   font-family: 'Quicksand', sans-serif;
 }
@@ -19,13 +19,15 @@ body{
 }
 
 #title{
-  margin-top: 2.5%;
-  margin-bottom: 7.5%;
+  margin-top: 3.5%;
+  margin-bottom: 5%;
   font-size: 3rem;
 }
 
 #age{
   color:#111111;
+  position: relative;
+  top:10px;
   vertical-align: middle;
   width:50px;
   height: 50px;
@@ -48,11 +50,11 @@ img{
   display: block;
 }
 #ageResult{
-  width: 60%;
+  width: 35%;
   margin: 0 auto;
   text-align: center;
   font-size: 30px;
-  margin-top: 5%;
+  margin-top: 3.5%;
   padding: 10px;
   border: white solid 5px;
   border-radius: 40px;
@@ -63,6 +65,14 @@ img{
   display: none;
 }
 
+#picture{
+  width: 13%;
+  height: 8%;
+  position: relative;
+  margin-top: 5px;
+
+
+}
 .pure-material-button-contained {
     margin: 0px auto;
     position: relative;
@@ -271,4 +281,19 @@ img{
 
 .pure-material-button-contained-small:disabled::after {
     opacity: 0;
+}
+
+@media only screen and (max-width: 535px) {
+  #picture{
+    display: none;
+  }
+
+  #ageResult{
+    padding: 20px;
+    width: 50%;
+  }
+  #age{
+    position: relative;
+    top: 0px;
+  }
 }
