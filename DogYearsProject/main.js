@@ -13,6 +13,6 @@ const animalAlgos = {
 };
 let age = document.getElementById('age').value;
 let animalObject = {};
-let colorArray = ["#85144b","#FF4136","#0074D9","#7FDBFF","#3D9970","#2ECC40","#B10DC9","#F012BE"];
+let colorArray = ["#85144b","#FF851B","#7FDBFF","#3D9970","#2ECC40","#B10DC9","#F012BE"];
 let counter = -1;
-  let body = document.getElementById('block');
+let div = document.querySelector("#container");

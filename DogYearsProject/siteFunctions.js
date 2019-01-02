@@ -92,10 +92,10 @@ function createAgeElement(animalObject) {
     para.appendChild(node);
     para.setAttribute("id", "ageResult");
 
-    body.appendChild(para);
+    div.appendChild(para);
   } else if (!(isNaN(animalObject.animalAge))) {
-    element = document.getElementById('ageResult');
-    body.removeChild(element);
+   let  element = document.getElementById('ageResult');
+    div.removeChild(element);
     createAgeElement(animalObject);
   } else {}
 

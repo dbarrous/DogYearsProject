@@ -2,14 +2,17 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
+
   <title>AniAnimals Calculator</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   <meta name="author" content="Damian Barrous-Dume">
   <link rel="shortcut icon" type="image/png" href="pics/default.png">
   <meta name="description" content="This webpage allows you to calculate your age if you were a Dog, Cat, Snake, Turtle, Goldfish, Horse, Cow. More updates to come in styling as well as more animals!">
-
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 </head>
 
@@ -17,19 +20,25 @@
 
 
   <main id="block">
-    <h1 id="title">Animal Calculator!</h1>
-    <form id="ageForm">
-      <label for="age" id="labelAge">Your Age:</label>
-      <input type="text" id="age" name="age" onkeyup="updateAge()">
-    </form>
+    <div id="container">
+      <h1 id="title">Animal Calculator!</h1>
+      <form id="ageForm">
+        <label for="age" id="labelAge">Your Age:</label>
+        <input type="text" id="age" name="age" onkeyup="updateAge()">
+      </form>
 
-    <button onclick="back();unHide()" id="prev" class="pure-material-button-contained-small">Previous Animal</button>
-    <button onclick="next();unHide();" id="next" class="pure-material-button-contained-small">Next Animal</button>
-  </main>
+      <button onclick="back();unHide()" id="prev" class="pure-material-button-contained-small">Previous Animal</button>
+      <button onclick="next();unHide();" id="next" class="pure-material-button-contained-small">Next Animal</button>
+
   <img  id="picture" src="pics/default.png" alt="Animal Picture">
+  </div>
+  </main>
   <script type="text/javascript" src="Animal.js"></script>
   <script type="text/javascript" src ="siteFunctions.js"></script>
   <script type="text/javascript" src="main.js"></script>
+
+
+
 
 </body>
 

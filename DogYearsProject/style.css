@@ -7,6 +7,8 @@ body{
   background-color: #001f3f;
   color:white;
   font-family: 'Quicksand', sans-serif;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -16,12 +18,24 @@ body{
   margin: 0 auto;
   text-align: center;
 
+
+
 }
 
+#container{
+    background-color: #0074D9;
+    width: 80%;
+    margin: 5% auto;
+    padding: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
 #title{
   margin-top: 3.5%;
   margin-bottom: 5%;
   font-size: 3rem;
+    text-shadow: 2px 2px 3px grey;
+
 }
 
 #age{
@@ -38,16 +52,21 @@ body{
   border-radius: 20px;
   border: 0px;
 
+
 }
 
 #labelAge{
-  font-size: 40px;
+  font-size: 30px;
+    font-family: "Times New Roman", serif;
+    text-shadow: 2px 2px 3px grey;
+
+
 }
-img{
-  margin: 0px auto;
-  min-width: 128px;
-  height: 72px;
-  display: block;
+img {
+    margin: 0px auto;
+    min-width: 128px;
+    height: 72px;
+    display: block;
 }
 #ageResult{
   width: 35%;
@@ -58,7 +77,8 @@ img{
   padding: 10px;
   border: white solid 5px;
   border-radius: 40px;
-  background-color: #c0392b;
+  background-color: #FF4136;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #ageForm{
@@ -283,11 +303,14 @@ img{
     opacity: 0;
 }
 
-@media only screen and (max-width: 535px) {
+@media only screen and (max-width: 640px) {
   #picture{
     display: none;
   }
 
+    #title{
+        font-size:2.4rem;
+    }
   #ageResult{
     padding: 20px;
     width: 50%;
@@ -295,5 +318,15 @@ img{
   #age{
     position: relative;
     top: 0px;
+
+  }
+  #block{
+      width: 80%;
+      margin: 0 auto;
+  }
+  #container{
+
+      margin: 5% auto;
+
   }
 }
